@@ -1,0 +1,243 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav{
+    margin: 0;
+    padding: 10px;
+}
+
+.nav{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    max-height: 110px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 10px solid white;
+}
+
+.nav .logo {
+    max-height: 110px ;
+}
+
+.nav-options-l, .nav-options-r{
+    display: flex;
+}
+
+.nav-options-l a, .nav-options-r a{
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    color: black;
+    text-shadow: 1px 1px 3px black;
+}
+.nav-options-l a:hover{
+    transform: scale(1.5);
+}
+
+.nav .search-bar input{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 350px;
+    text-align: center;
+    border-radius: 40px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 3px black;
+}
+
+.nav .search-bar input:active{
+    border: blueviolet;
+}
+
+.nav .nav-options-r ul{
+    display: flex;
+    align-items: center;
+}
+
+.nav .nav-options-r img{
+    max-height: 50px;
+    padding: 0 20px;
+}
+
+#menu-button{
+    padding: 10px 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.line{
+    padding: 5px;
+    width: 30px;
+    background-color: black;
+    margin: 3px;
+    border-radius: 30px;
+}
+
+#menu{
+    display: none;
+    justify-content: right;
+}
+#menu a{
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    color: black;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* Main Content */
+.hero{
+    background-image: url(image/bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+/*property lists*/
+.Houses, .Lands, .Rents, .add {
+    width: 90%;
+    margin: 2% 5%;
+    padding: 50px 0;
+    border-radius: 40px;
+    overflow-y: auto;
+    min-height: 80vh;
+    backdrop-filter: blur(30px);
+}
+
+.Houses, .Lands, .Rents {
+    text-align: center;
+    
+}
+
+.Houses .properties, .Lands .properties, .Rents .properties {
+    display: block;
+    flex-wrap: wrap;
+    gap: 5px;
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+.property-card {
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin: 3% 2%;
+    background-color: whitesmoke;
+    min-height: 100px;
+    padding: 10px;
+}
+
+.property-card:hover {
+    transform: scale(1.03);
+}
+
+.property-card h2 {
+    text-align: center;
+    margin: 3% 0;
+}
+
+.property-card .property-img,
+.property-card .property,
+.property-card .map {
+    width: 30%;
+    padding-top: 3%;
+}
+
+.property-card .property-img {
+    display: flex;
+    overflow-x: scroll;
+    background-color: #fff;
+}
+
+.property-card .property {
+    margin: 0 4%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.property-card .property p {
+    overflow-wrap: break-word;
+    margin: 0 6%;
+    text-align: start;
+}
+
+.property-card .map {
+    overflow: hidden;
+    background-color: #fff;
+}
+
+
+/*add*/
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+table{
+    width: 80%;
+}
+table td{
+    text-align: left;
+    border: 1px solid black;
+    padding: 20px;
+}
+table tr{
+    min-height: 30px;
+}
+
+
+/*footer*/
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-options {
+        flex-direction: column;
+        align-items: flex-start; /* Align to start on smaller screens */
+    }
+    
+    .nav-options li {
+        margin: 5px 0; /* Space between items */
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: flex-start; /* Align to start on smaller screens */
+        margin-top: 10px; /* Space above search bar */
+    }
+
+
+    .menu-list {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .property-card {
+        flex-direction: column;
+    }
+
+    .property-card .property-img,
+    .property-card .property,
+    .property-card .map {
+        width: 100%;
+    }
+}
+

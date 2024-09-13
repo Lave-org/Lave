@@ -1,0 +1,76 @@
+{% extends 'header.html' %}
+{% block content %}
+<section class="Rents" id="Rents">
+    <strong>
+        <h1>For Rents</h1>
+    </strong>
+    <div class="properties">
+        <div class="property-card">
+            <div class="property-img">
+                <img src="image/property" alt="property 1">
+            </div>
+            <div class="property">
+                <strong>
+                    <h2>property type</h2>
+                </strong>
+                <p>A breif describe about property. </p>
+            </div>
+            <div class="map">
+                <strong>
+                    <h2>property location</h2>
+                </strong>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="property-img">
+                
+                <img src="{{url_for('static', filename='image/fav-removebg-preview.png')}}" alt="">
+            </div>
+            <div class="property">
+                <strong>
+                    <h2>property type</h2>
+                </strong>
+                <p>A breif describe about property. HTML:
+
+                    The div with the class search-container wraps the input field and button to control their
+                    positioning.
+                    The input field has a placeholder to show a hint text.
+                    The button contains an SVG icon representing a search icon.
+                    CSS:
+                    The .search-container is positioned relatively to allow absolute positioning of the button.
+                    The .search-input is styled to have padding on the right to make space for the search icon.
+                    The .search-button is positioned absolutely inside the .search-container, allowing it to sit on
+                    top of the input field.
+                    The .search-icon defines the size and color of the icon.
+                    You can adjust the sizes, colors, and padding as needed to fit your design.
+                </p>
+            </div>
+            <div class="map">
+                <strong>
+                    <h2>property location</h2>
+                </strong>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d329662.37274991727!2d86.14816945494097!3d27.392608050355797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDMxJzE5LjEiTiA4NsKwMDYnMzMuMSJF!5e0!3m2!1sen!2snp!4v1725619010235!5m2!1sen!2snp"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="property-img">
+                <img src="image/property" alt="property 1">
+            </div>
+            <div class="property">
+                <strong>
+                    <h2>property type</h2>
+                </strong>
+                <p>A breif describe about property. </p>
+            </div>
+            <div class="map">
+                <strong>
+                    <h2>property location</h2>
+                </strong>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

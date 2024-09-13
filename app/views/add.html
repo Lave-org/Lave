@@ -1,0 +1,25 @@
+{% extends 'header.html' %}
+{% block content %}
+<section class="add">
+    <form action="">
+        <table>
+            <tr>
+                <td><strong>Select Property type</strong></td>
+                <td>
+                    <input type="radio" name="property-type" id="house" required><strong>House</strong>
+                    <input type="radio" name="property-type" id="land" required><strong>Land</strong>
+                    <input type="radio" name="property-type" id="rent" required><strong>For Rents</strong>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Add Photo+</strong></td>
+                <td><input type="file" name="photo" id="" required></td>
+            </tr>
+            <tr>
+                <td><button type="submit">Submit</button></td>
+                <td><button type="reset">Reset</button></td>
+            </tr>
+        </table>
+    </form>
+</section>
+{% endblock %}

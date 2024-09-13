@@ -1,0 +1,89 @@
+{% if user %}
+    {% set image_name = 'userv.png' %}
+{% else %}
+    {% set image_name = 'user+.png' %}
+{% endif %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <link rel="icon" href="{{url_for('static', filename='image/lave.jpg')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{url_for('static', filename='image/lave.jpg')}}" type="image/x-icon">
+    <title>Lave</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <div class="logo">
+                <a href="/"><img src="{{url_for('static', filename='image/lave.jpg')}}" alt="logo" class="logo"></a>
+
+            </div>
+            <div class="nav-options-l">
+                <li type="none"><a href="/Houses" class="nav-button"><strong>Houses</strong></a></li>
+                <li type="none"><a href="/Lands" class="nav-button"><strong>Lands</strong></a></li>
+                <li type="none"><a href="/Rents" class="nav-button"><strong>For Rents</strong></a></li>
+                <li type="none"><a href="#" class="nav-button"><strong>Premiums</strong></a></li>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="nav-options-r">
+                <ul>
+                    <li type="none">
+                        <a href="#">
+                            <img src="{{ url_for('static', filename='image/' ~ image_name) }}" alt="">
+                        </a>
+                    </li>
+                    <li type="none"><a href="#"><img src="{{url_for('static', filename='image/fav.png')}}" alt=""></a></li>
+                    <li type="none"><a href="add"><strong>Add Properties</strong></a></li>
+                </ul>
+
+            </div>
+            <button id="menu-button" onclick="menu()">
+                <div class="menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </button>
+        </div>
+        <div class="menu-list" id="menu">
+            <div class="list">
+                <ul>
+                    <li type="none"><a href="/"><strong>Dashboard</strong></a></li>
+                    <li type="none"><a href="/Login"><strong>Profile</strong></a></li>
+                    <li type="none"><a href=""><strong>Settings</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="hero">
+        {% block content%} {% endblock %}
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="contact">
+                <h3>get in touch</h3>
+                <div class="socialmedia-icon">
+
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2024 <a href="https://www.rojitpokharel.com.np/">Rojit Pokharel</a>. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
